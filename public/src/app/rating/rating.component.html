@@ -1,0 +1,18 @@
+<p>
+  rating works!
+</p>
+
+<form (submit) = "rateSubmit(cake._id)">
+
+  <p> {{ newRate | json }} </p>
+  <input type="text" name="newRate.review" [(ngModel)]= "newRate.review" />
+  <select name = "newRate.stars" [(ngModel)]= "newRate.stars">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+  </select>
+  <input type="submit" value="Submit Rate" />
+
+</form>

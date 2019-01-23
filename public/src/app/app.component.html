@@ -1,0 +1,31 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Rate My Cake
+  </h1>
+
+
+  <form (submit) = "onSubmit()">
+
+    <p> {{ newCake | json }} </p>
+    <input type="text" name="newCake.bakerName" [(ngModel)]= "newCake.bakerName" />
+    <input type="text" name="newCake.imgUrl" [(ngModel)]= "newCake.imgUrl" />
+    <input type="submit" value="Create Cake" />
+
+  </form>
+
+  
+
+  <div *ngFor = "let cake of cakes"><h3>{{cake.bakerName}}</h3><br>
+
+    <button><img src="{{cake.imgUrl}}" alt="Smiley face" width = "100"></button>
+
+    <app-rating></app-rating>
+
+  </div>
+
+</div>
+
+
+
+<router-outlet></router-outlet>
